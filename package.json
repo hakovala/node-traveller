@@ -1,0 +1,17 @@
+{
+  "name": "node-jsonfinder",
+  "version": "0.1.0",
+  "description": "Recursive JSON object property finder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "grunt test"
+  },
+  "author": "Harri Kovalainen <hakovala@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "nodeunit": "~0.8.4",
+    "grunt-contrib-nodeunit": "~0.3.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.2"
+  }
+}
