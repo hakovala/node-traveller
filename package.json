@@ -1,13 +1,27 @@
 {
-  "name": "node-jsonfinder",
+  "name": "traveller",
   "version": "0.1.0",
-  "description": "Recursive JSON object property finder.",
+  "description": "Recursive JSON/Object property finder with simple selectors.",
+  "keywords": [
+    "json",
+    "object",
+    "selector",
+    "finder",
+    "recursive"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hakovala/node-traveller"
+  },
   "main": "index.js",
   "scripts": {
     "test": "grunt test"
   },
   "author": "Harri Kovalainen <hakovala@gmail.com>",
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "url": "http://github.com/hakovala/node-traveller/"
+  },
   "devDependencies": {
     "nodeunit": "~0.8.4",
     "grunt-contrib-nodeunit": "~0.3.0",
