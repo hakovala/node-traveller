@@ -3,6 +3,11 @@ Traveller
 
 Traveller is a simple helper for finding and collecting property values from json object by using simple selectors. 
 
+NOTE
+----
+
+This project is not maintained anymore. It's here just for a reference if somebody want's to create something similar. 
+
 Installation
 ------------
 	npm install traveller
