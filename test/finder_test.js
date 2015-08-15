@@ -14,7 +14,8 @@ var TEST_OBJ = {
 	"string_array": [ "hello", "world" ],
 	"object_array": [
 		{
-			"key": "value"
+			"key": "value",
+			"0": "zerovalue"
 		},
 		{
 			"key": "value"
@@ -109,7 +110,7 @@ exports['test selectors'] = {
 	},
 	"find child array property": function(test) {
 		var res = finder('object_array.key', TEST_OBJ);
-		
+
 		for (var i in res) {
 			test.equal(res[i], 'value');
 		}
@@ -118,7 +119,7 @@ exports['test selectors'] = {
 	},
 	"find all": function(test) {
 		var res = finder('object_key.*', TEST_OBJ);
-		
+
 		test.equal(res[0], TEST_OBJ.object_key['first_key']);
 		test.equal(res[1], TEST_OBJ.object_key['second_key']);
 
@@ -143,6 +144,20 @@ exports['test selectors'] = {
 		var res = finder('dummy.first.name.too.long.selector', TEST_OBJ);
 
 		test.equal(res.length, 0, "should be empty array");
+
+		test.done();
+	},
+	"find array own properties": function(test) {
+		var res = finder('object_array.length', TEST_OBJ);
+
+		test.equal(res[0], 3, "should have length of 3");
+
+		test.done();
+	},
+	"find array items at index": function(test) {
+		var res = finder('object_array.0.0', TEST_OBJ);
+
+		test.equal(res[0], "zerovalue", "should access value at index");
 
 		test.done();
 	}

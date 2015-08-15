@@ -15,7 +15,7 @@ module.exports = function(selector, obj) {
 			for (var k in obj) {
 				res = res.concat(findRecursive(selector.slice(1), obj[k]));
 			}
-		} else if (Array.isArray(obj)) { // if object is array, check each value, but don't consume selector
+		} else if (Array.isArray(obj) && !obj.hasOwnProperty(selector[0])) { // if object is array, check each value, but don't consume selector
 			for (var i in obj) {
 				res = res.concat(findRecursive(selector, obj[i]));
 			}
